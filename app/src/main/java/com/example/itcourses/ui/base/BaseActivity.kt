@@ -13,6 +13,7 @@ abstract class BaseActivity<V : BaseView, P : BasePresenter<V>> : AppCompatActiv
         super.onCreate(savedInstanceState)
         setContentView(contentId)
         initViews()
+        presenter.onViewCreate()
     }
 
     protected open fun initViews() = Unit

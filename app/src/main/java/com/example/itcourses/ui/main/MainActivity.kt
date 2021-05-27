@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.example.itcourses.R
 import com.example.itcourses.ui.base.BaseActivity
 import com.example.itcourses.ui.calclulator.CalculatorActivity
+import com.example.itcourses.ui.list.ListActivity
 
 class MainActivity : BaseActivity<MainView, MainPresenter>(), MainView {
 
@@ -30,7 +31,8 @@ class MainActivity : BaseActivity<MainView, MainPresenter>(), MainView {
         }
 
         button2.setOnClickListener {
-            Toast.makeText(this, "Button 1", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ListActivity::class.java)
+            startActivity(intent)
         }
 
         button3.setOnClickListener {
